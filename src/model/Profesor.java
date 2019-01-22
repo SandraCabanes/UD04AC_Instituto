@@ -16,6 +16,7 @@ public class Profesor implements Serializable {
 
     private int id;
     private Nombre nombre;
+    private TipoFuncionario tipoFuncionario;
     //private String nombre;
    // private String ape1;
    // private String ape2;
@@ -23,8 +24,9 @@ public class Profesor implements Serializable {
     public Profesor() {
     }
 
-      public Profesor(Nombre nombre) {
+      public Profesor(Nombre nombre, TipoFuncionario tipoFuncionario) {
         this.nombre = nombre;
+        this.tipoFuncionario=tipoFuncionario;
     }
 
     /*public Profesor(String nombre, String ape1, String ape2) {
@@ -47,6 +49,14 @@ public class Profesor implements Serializable {
 
     public void setId(int id) {
         this.id = id;
+    }
+    
+    public TipoFuncionario getTipoFuncionario() {
+        return tipoFuncionario;
+    }
+
+    public void setTipoFuncionario(TipoFuncionario tipoFuncionario) {
+        this.tipoFuncionario = tipoFuncionario;
     }
 
     /*
@@ -73,5 +83,5 @@ public class Profesor implements Serializable {
     public void setApe2(String ape2) {
         this.ape2 = ape2;
     }*/
-    
+
 }

@@ -10,5 +10,11 @@
             <property name="ape1" type="string"/>
             <property name="ape2" type="string"/>
         </component>
+        <property name="tipoFuncionario">
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">model.TipoFuncionario</param>
+                <param name="type">12</param>
+            </type>
+        </property> 
     </class>
 </hibernate-mapping>

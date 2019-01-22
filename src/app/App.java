@@ -9,6 +9,7 @@ import java.util.Calendar;
 import model.Alumno;
 import model.Nombre;
 import model.Profesor;
+import model.TipoFuncionario;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -33,7 +34,7 @@ public class App {
         // CREAMOS UN OBJETO
         Alumno alumno=new Alumno(10, "Pepe", 20, true, Calendar.getInstance().getTime(), Calendar.getInstance().getTime(), Calendar.getInstance().getTime(),"Hola");
         //Profesor profesor=new Profesor("Eduardo", "Grau", "Aroca");
-        Profesor profesor=new Profesor(new Nombre("Antonio", "Martinez", "Aroca"));
+        Profesor profesor=new Profesor(new Nombre("Marta", "Rubio", "Sánchez"), TipoFuncionario.INTERINO);
         
         //CREAR UNA SESION
         Session session=factory.openSession();
