@@ -3,6 +3,14 @@
 
 <hibernate-configuration>
   <session-factory>
-
-    </session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/instituto?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC</property>
+    <property name="hibernate.connection.username">instituto</property>
+     <property name="hibernate.connection.password">instituto</property>
+    <property name="hibernate.show_sql">true</property>
+    
+    <mapping resource="controller/Alumno.hbm.xml"/>
+    <mapping class="model.Alumno"/>
+  </session-factory>
 </hibernate-configuration>
