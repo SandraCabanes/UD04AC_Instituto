@@ -7,6 +7,7 @@ package app;
 
 import java.util.Calendar;
 import model.Alumno;
+import model.Profesor;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -30,13 +31,15 @@ public class App {
         
         // CREAMOS UN OBJETO
         Alumno alumno=new Alumno(10, "Pepe", 20, true, Calendar.getInstance().getTime(), Calendar.getInstance().getTime(), Calendar.getInstance().getTime(),"Hola");
+        Profesor profesor=new Profesor("Eduardo", "Grau", "Aroca");
         
         //CREAR UNA SESION
         Session session=factory.openSession();
         session.beginTransaction();
         
         //GUARDAR OBJETO
-        session.save(alumno);
+        //session.save(alumno);
+        session.save(profesor);
         
         //session.saveOrUpdate(profesor);
         

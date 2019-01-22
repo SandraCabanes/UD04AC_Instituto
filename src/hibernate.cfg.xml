@@ -12,5 +12,8 @@
     
     <mapping resource="controller/Alumno.hbm.xml"/>
     <mapping class="model.Alumno"/>
+    
+    <mapping resource="controller/Profesor.hbm.xml"/>
+    <mapping class="model.Profesor"/>
   </session-factory>
 </hibernate-configuration>
