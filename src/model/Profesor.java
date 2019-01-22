@@ -10,21 +10,35 @@ import java.io.Serializable;
 /**
  *
  * @author Sandra
+ * ESTÁ COMENTADO EL EJEMPLO DE PROFESOR DE LA CLASE 22-01-2019
  */
 public class Profesor implements Serializable {
 
     private int id;
-    private String nombre;
-    private String ape1;
-    private String ape2;
+    private Nombre nombre;
+    //private String nombre;
+   // private String ape1;
+   // private String ape2;
 
     public Profesor() {
     }
 
-    public Profesor(String nombre, String ape1, String ape2) {
+      public Profesor(Nombre nombre) {
         this.nombre = nombre;
-        this.ape1 = ape1;
-        this.ape2 = ape2;
+    }
+
+    /*public Profesor(String nombre, String ape1, String ape2) {
+    this.nombre = nombre;
+    this.ape1 = ape1;
+    this.ape2 = ape2;
+    }*/
+    
+    public void setNombre(Nombre nombre) {
+        this.nombre = nombre;
+    }
+    
+     public Nombre getNombre() {
+        return nombre;
     }
 
     public int getId() {
@@ -35,6 +49,7 @@ public class Profesor implements Serializable {
         this.id = id;
     }
 
+    /*
     public String getNombre() {
         return nombre;
     }
@@ -57,13 +72,6 @@ public class Profesor implements Serializable {
 
     public void setApe2(String ape2) {
         this.ape2 = ape2;
-    }
-
-    @Override
-    public String toString() {
-        return "Profesor{" + "id=" + id + ", nombre=" + nombre + ", ape1=" + ape1 + ", ape2=" + ape2 + '}';
-    }
-
-  
+    }*/
     
 }
